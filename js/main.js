@@ -63,16 +63,18 @@ let sceltaUser = ['']
 let sceltaPC = ['']
 let somma = 0;
 
-for (let index = 0; index < array.length; index++) {
+for (let user = 0; user < sceltaUser.length; index++) {
     if (sceltaNumeroUser > 5) {
         sceltaNumeroUser = parseInt(prompt('Scegli un numero da 1 a 5'));
     } else if (sceltaNumeroUser == 0) {
         alert('Non puoi scegliere ZERO');
         sceltaNumeroUser = parseInt(prompt('Scegli un numero da 1 a 5'));
     } else {
-        sceltaUser.push(sceltaNumeroUser + sceltaPariDispariUser);
-    }  
-    
+        sceltaUser.push(sceltaNumeroUser(user) + sceltaPariDispariUser(user));
+    }    
+}
+
+for (let pc = 0; pc < sceltaPC.length; pc++) {
     sceltaPC = Math.floor(Math.random() * (5 - 1) + 1);
-    sceltaPC.push
+    sceltaPC.push(pc)  
 }
