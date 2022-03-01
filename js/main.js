@@ -13,25 +13,27 @@ confonto se:
 parola dritta == a parola inversa: è palindroma
 parola dritta != a parola inversa: non è palindroma
 */
-const myBtnPali = document.querySelector('palindromo');
-const myBtnPariDispari = document.querySelector('.pari_dispari');
-const boxPali = document.querySelector('.container_pali');
+
+
+const myBtnPali = document.getElementById('palindromo');
+const myBtnPariDispari = document.getElementById('pari_dispari');
+const boxPali = document.getElementById('container_pali');
 let convalida = false;
 
-
+myBtnPali.addEventListener('click', function()){
 let parola = prompt('Inserisci una parola per capire se è palindroma');
 let lettereDellaParola = parola.split('');
 let lettereAlContrario = lettereDellaParola.reverse();
 let parolaAlContrario = lettereAlContrario.join(''); 
-
-    
-
 if (parola == parolaAlContrario) {
     boxPali.innerHTML = 'la parola '+ parola + ' è palindroma.'
 } else {
     boxPali.innerHTML = 'la parola '+ parola + ' non è palindroma.'
 }
-     
+}
+    
+
+
 
 
 
@@ -54,3 +56,10 @@ sommiamo il numero utente e numero pc
 se ha vinto utente 'utente ha vinto'
 se ha vinto pc 'pc ha vinto'
 */
+
+// let sceltaPariDispariUser = prompt('scegli pari o dispari');
+// let sceltaNumeroUser = parseInt(prompt('Scegli un numero da 1 a 5'));
+
+// if (sceltaNumeroUser > 5) {
+    
+// }

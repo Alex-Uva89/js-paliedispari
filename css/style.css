@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.container{
+#container{
     width: 800px;
     height: 100vh;
     margin: 0 auto;
@@ -15,7 +15,8 @@
     align-items: center;
 }
 
-.container_pali{
+#container_pali,
+#container_pari_dispari{
     width: 80%;
     height: 40%;
     background-color: aqua;
@@ -24,10 +25,5 @@
     align-items: center;
     color: blueviolet;
     font-size: 1.5em;
-}
-
-.container_pari_dispari{
-    width: 80%;
-    height: 40%;
-    background-color: aqua
+    border-radius: 2em;
 }
