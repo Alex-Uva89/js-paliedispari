@@ -43,3 +43,14 @@
 #rigioca{
     display: none;
 }
+
+@media screen and (max-width: 600px) {
+    #container{
+        width: 90%;
+    }
+
+    #container_pali,
+    #container_pari_dispari{
+        width: 85%;
+
+}
