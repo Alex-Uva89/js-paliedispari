@@ -20,25 +20,69 @@ const myBtnPariDispari = document.getElementById('pari_dispari');
 const boxPali = document.getElementById('container_text1');
 let convalida = false;
 
+// myBtnPali.addEventListener('click', function(){
+// let parola = prompt('Inserisci una parola per capire se è palindroma');
+// let lettereDellaParola = parola.split('');
+// let lettereAlContrario = lettereDellaParola.reverse();
+// let parolaAlContrario = lettereAlContrario.join(''); 
+// if (parola == parolaAlContrario) {
+//     boxPali.innerHTML = 'la parola '+ parola + ' è palindroma.'
+// } else {
+//     boxPali.innerHTML = 'la parola '+ parola + ' non è palindroma.'
+// }
+
+// myBtnPali.innerHTML = 'Riprova';
+
+// }) 
+
+// ::::::::::::::::::metodo while:::::::::::::::::::::::::::
+
 myBtnPali.addEventListener('click', function(){
-let parola = prompt('Inserisci una parola per capire se è palindroma');
-let lettereDellaParola = parola.split('');
-let lettereAlContrario = lettereDellaParola.reverse();
-let parolaAlContrario = lettereAlContrario.join(''); 
-if (parola == parolaAlContrario) {
-    boxPali.innerHTML = 'la parola '+ parola + ' è palindroma.'
-} else {
-    boxPali.innerHTML = 'la parola '+ parola + ' non è palindroma.'
+let parolaUser = prompt('Scegli la tua parola');
+let carattere;
+let parolaInversa = '';
+
+let i = parolaUser.length - 1;
+while (i >= 0) {
+  carattere = parolaUser[i];
+  parolaInversa += carattere;
+  i--;
 }
 
-myBtnPali.innerHTML = 'Riprova';
+if(parolaUser == parolaInversa){
+    boxPali.innerHTML = 'la parola '+ parolaUser + ' è palindroma.'
+  } else {
+    boxPali.innerHTML = 'la parola '+ parolaUser + ' non è palindroma.'
+  }
+
+  myBtnPali.innerHTML = 'Riprova';
 
 }) 
 
 
 
+// function invertiParola(str){
+//   let parolaInversa = '';
 
+//   let i = str.length - 1;
 
+//   while (i >= 0) {
+//     parolaInversa += str[i];
+//     i--;
+//   }
+
+//   return parolaInversa;
+// }
+
+// function invertiParola(str) {
+//     if (str !== "")
+//       return invertiParola(str.substr(1)) + str.charAt(0);
+//    else
+//      return "";
+//   }
+  
+//   console.log(invertiParola("coding"));
+  
 
 
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
