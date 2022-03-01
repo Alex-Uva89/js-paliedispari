@@ -19,26 +19,18 @@ const boxPali = document.querySelector('.container_pali');
 let convalida = false;
 
 
-let parola = prompt('Inserisci una parola');
+let parola = prompt('Inserisci una parola per capire se è palindroma');
 let lettereDellaParola = parola.split('');
 let lettereAlContrario = lettereDellaParola.reverse();
 let parolaAlContrario = lettereAlContrario.join(''); 
     
-    if (parola == parolaAlContrario) {
-        boxPali.innerHTML = 'la parola '+ parola + ' è palindroma.'
-    } else {
-        boxPali.innerHTML = 'la parola '+ parola + ' non è palindroma.'
-    }
+
+if (parola == parolaAlContrario) {
+    boxPali.innerHTML = 'la parola '+ parola + ' è palindroma.'
+} else {
+    boxPali.innerHTML = 'la parola '+ parola + ' non è palindroma.'
+}
      
-
-
-
-
-
-
-
-
-
 
 
 
@@ -54,5 +46,10 @@ let parolaAlContrario = lettereAlContrario.join('');
 
 /*
 PSEUDOCODIFICA:
-
+utente sceglie pari o dispari
+utente inserisce numero da 1 a 5
+il pc genera un numero casuale da 1 a 5
+sommiamo il numero utente e numero pc
+se ha vinto utente 'utente ha vinto'
+se ha vinto pc 'pc ha vinto'
 */

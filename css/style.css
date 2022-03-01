@@ -19,6 +19,11 @@
     width: 80%;
     height: 40%;
     background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blueviolet;
+    font-size: 1.5em;
 }
 
 .container_pari_dispari{
