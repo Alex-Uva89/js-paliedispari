@@ -23,6 +23,7 @@ let parola = prompt('Inserisci una parola per capire se è palindroma');
 let lettereDellaParola = parola.split('');
 let lettereAlContrario = lettereDellaParola.reverse();
 let parolaAlContrario = lettereAlContrario.join(''); 
+
     
 
 if (parola == parolaAlContrario) {
