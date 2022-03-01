@@ -14,13 +14,13 @@ parola dritta == a parola inversa: è palindroma
 parola dritta != a parola inversa: non è palindroma
 */
 
-
+/*
 const myBtnPali = document.getElementById('palindromo');
 const myBtnPariDispari = document.getElementById('pari_dispari');
 const boxPali = document.getElementById('container_pali');
 let convalida = false;
 
-myBtnPali.addEventListener('click', function()){
+myBtnPali.addEventListener('click', function(){
 let parola = prompt('Inserisci una parola per capire se è palindroma');
 let lettereDellaParola = parola.split('');
 let lettereAlContrario = lettereDellaParola.reverse();
@@ -30,8 +30,8 @@ if (parola == parolaAlContrario) {
 } else {
     boxPali.innerHTML = 'la parola '+ parola + ' non è palindroma.'
 }
-}
-    
+}) 
+*/  
 
 
 
@@ -57,9 +57,22 @@ se ha vinto utente 'utente ha vinto'
 se ha vinto pc 'pc ha vinto'
 */
 
-// let sceltaPariDispariUser = prompt('scegli pari o dispari');
-// let sceltaNumeroUser = parseInt(prompt('Scegli un numero da 1 a 5'));
+let sceltaPariDispariUser = prompt('scegli pari o dispari');
+let sceltaNumeroUser = parseInt(prompt('Scegli un numero da 1 a 5'));
+let sceltaUser = ['']
+let sceltaPC = ['']
+let somma = 0;
 
-// if (sceltaNumeroUser > 5) {
+for (let index = 0; index < array.length; index++) {
+    if (sceltaNumeroUser > 5) {
+        sceltaNumeroUser = parseInt(prompt('Scegli un numero da 1 a 5'));
+    } else if (sceltaNumeroUser == 0) {
+        alert('Non puoi scegliere ZERO');
+        sceltaNumeroUser = parseInt(prompt('Scegli un numero da 1 a 5'));
+    } else {
+        sceltaUser.push(sceltaNumeroUser + sceltaPariDispariUser);
+    }  
     
-// }
+    sceltaPC = Math.floor(Math.random() * (5 - 1) + 1);
+    sceltaPC.push
+}
