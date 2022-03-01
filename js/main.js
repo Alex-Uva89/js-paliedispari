@@ -6,8 +6,32 @@
 
 /*
 PSEUDOCODIFICA:
-
+chiedo la parola al cliente
+divido la parola in lettere
+inverto il senso delle lettere nello stesso ordine
+confonto se:
+parola dritta == a parola inversa: è palindroma
+parola dritta != a parola inversa: non è palindroma
 */
+const myBtnPali = document.querySelector('palindromo');
+const myBtnPariDispari = document.querySelector('.pari_dispari');
+const boxPali = document.querySelector('.container_pali');
+let convalida = false;
+
+
+let parola = prompt('Inserisci una parola');
+let lettereDellaParola = parola.split('');
+let lettereAlContrario = lettereDellaParola.reverse();
+let parolaAlContrario = lettereAlContrario.join(''); 
+    
+    if (parola == parolaAlContrario) {
+        boxPali.innerHTML = 'la parola '+ parola + ' è palindroma.'
+    } else {
+        boxPali.innerHTML = 'la parola '+ parola + ' non è palindroma.'
+    }
+     
+
+
 
 
 
