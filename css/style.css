@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: rgb(102, 102, 231);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container_pali{
+    width: 80%;
+    height: 40%;
+    background-color: aqua;
+}
+
+.container_pari_dispari{
+    width: 80%;
+    height: 40%;
+    background-color: aqua
+}
