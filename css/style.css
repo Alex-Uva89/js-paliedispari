@@ -17,10 +17,12 @@
 
 #container_pali,
 #container_pari_dispari{
-    width: 80%;
+    width: 70%;
     height: 40%;
+    padding: 20px;
     background-color: aqua;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: blueviolet;
@@ -28,8 +30,16 @@
     border-radius: 2em;
 }
 
-#palindromo {
+#palindromo,
+#pari_dispari {
     padding: 1em;
     background-color: rgb(66, 130, 248);
     color: rgb(2, 2, 68);
+    border-radius: 1em;
+    margin-top: 20px;
+}
+
+
+#rigioca{
+    display: none;
 }

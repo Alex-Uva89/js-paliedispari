@@ -14,10 +14,10 @@ parola dritta == a parola inversa: è palindroma
 parola dritta != a parola inversa: non è palindroma
 */
 
-/*
+
 const myBtnPali = document.getElementById('palindromo');
 const myBtnPariDispari = document.getElementById('pari_dispari');
-const boxPali = document.getElementById('container_pali');
+const boxPali = document.getElementById('container_text1');
 let convalida = false;
 
 myBtnPali.addEventListener('click', function(){
@@ -30,8 +30,11 @@ if (parola == parolaAlContrario) {
 } else {
     boxPali.innerHTML = 'la parola '+ parola + ' non è palindroma.'
 }
+
+myBtnPali.innerHTML = 'Riprova';
+
 }) 
-*/  
+
 
 
 
@@ -57,24 +60,38 @@ se ha vinto utente 'utente ha vinto'
 se ha vinto pc 'pc ha vinto'
 */
 
-let sceltaPariDispariUser = prompt('scegli pari o dispari');
-let sceltaNumeroUser = parseInt(prompt('Scegli un numero da 1 a 5'));
-let sceltaUser = ['']
-let sceltaPC = ['']
-let somma = 0;
+const boxPariDispari = document.getElementById('container_text');
 
-for (let user = 0; user < sceltaUser.length; index++) {
-    if (sceltaNumeroUser > 5) {
-        sceltaNumeroUser = parseInt(prompt('Scegli un numero da 1 a 5'));
-    } else if (sceltaNumeroUser == 0) {
-        alert('Non puoi scegliere ZERO');
-        sceltaNumeroUser = parseInt(prompt('Scegli un numero da 1 a 5'));
+myBtnPariDispari.addEventListener('click', function () {
+    
+    let sceltaPariDispariUser = prompt('scegli pari o dispari');
+    let sceltaNumeroUser = parseInt(prompt('Scegli un numero da 1 a 5'));
+    let sceltaPC = randomPc(1, 5);
+    let somma = sceltaNumeroUser + sceltaPC;
+    
+    
+    function randomPc(min , max) {
+        return Math.floor(Math.random() * (max - min++) + min); 
+    }
+    
+    if (pariODispari(somma) == sceltaPariDispariUser) {
+        boxPariDispari.innerHTML = 'Hai vinto!! la tua scelta era: ' + sceltaPariDispariUser + '. Il pc ha pescato: ' + sceltaPC + ', e la somma è ' + somma;
     } else {
-        sceltaUser.push(sceltaNumeroUser(user) + sceltaPariDispariUser(user));
-    }    
-}
+        boxPariDispari.innerHTML = 'Il Pc ha vinto! la tua scelta era: ' + sceltaPariDispariUser + '. Il pc ha pescato: ' + sceltaPC + ', e la somma è ' + somma;
+    }
 
-for (let pc = 0; pc < sceltaPC.length; pc++) {
-    sceltaPC = Math.floor(Math.random() * (5 - 1) + 1);
-    sceltaPC.push(pc)  
-}
+    function pariODispari(risultato) {
+        if (risultato%2 == 0) {
+            return 'pari';        
+        } else {
+            return 'dispari';
+        }
+    }
+
+    myBtnPariDispari.innerHTML = 'Riprova';
+})
+
+
+
+
+
